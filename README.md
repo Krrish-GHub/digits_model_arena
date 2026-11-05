@@ -64,3 +64,7 @@ The benchmark does not claim generalization beyond this dataset, and this implem
 ## License
 
 Project code is MIT-licensed. The digits examples are distributed with scikit-learn; consult the linked scikit-learn documentation and project license for dataset/source terms.
+
+## Live demo
+
+Try the [interactive GitHub Pages demo](https://krrish-ghub.github.io/digits-model-arena/).

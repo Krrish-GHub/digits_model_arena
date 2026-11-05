@@ -1,0 +1,340 @@
+{
+  "dataset": {
+    "name": "scikit-learn digits",
+    "source": "sklearn.datasets.load_digits (bundled with scikit-learn)",
+    "samples": 1797,
+    "features": 64,
+    "image_shape": [
+      8,
+      8
+    ],
+    "classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "pixel_scale": "original integer range 0..16 divided by 16; fixed transform"
+  },
+  "protocol": {
+    "seed": 42,
+    "test_fraction": 0.25,
+    "train_samples": 1347,
+    "test_samples": 450,
+    "split": "stratified random holdout; scalers are fit only inside each training pipeline",
+    "latency_repeats": 7,
+    "latency_summary": "median duration for batch prediction divided by holdout size; same machine, one run"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.4"
+  },
+  "results": [
+    {
+      "model": "linear_svm",
+      "accuracy": 0.98,
+      "macro_f1": 0.9797520974297754,
+      "weighted_f1": 0.9798341913097246,
+      "fit_seconds": 0.024858155000401894,
+      "median_inference_us_per_image": 9.063473333096933,
+      "serialized_model_bytes_compressed": 55565,
+      "max_iterations": 936,
+      "probability_output": false
+    },
+    {
+      "model": "rbf_svm",
+      "accuracy": 0.98,
+      "macro_f1": 0.979922728464422,
+      "weighted_f1": 0.9799633772681454,
+      "fit_seconds": 0.033159565000460134,
+      "median_inference_us_per_image": 39.29348888858739,
+      "serialized_model_bytes_compressed": 118731,
+      "max_iterations": 281,
+      "probability_output": false
+    },
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.9777777777777777,
+      "macro_f1": 0.9776411985388958,
+      "weighted_f1": 0.9778294499565325,
+      "fit_seconds": 0.02126477700039686,
+      "median_inference_us_per_image": 0.6882266683937309,
+      "serialized_model_bytes_compressed": 4716,
+      "max_iterations": 31,
+      "probability_output": true
+    },
+    {
+      "model": "tiny_mlp_64",
+      "accuracy": 0.9777777777777777,
+      "macro_f1": 0.9777353162524938,
+      "weighted_f1": 0.9777981463586887,
+      "fit_seconds": 0.29567849399973056,
+      "median_inference_us_per_image": 1.1945088873390988,
+      "serialized_model_bytes_compressed": 61009,
+      "max_iterations": 58,
+      "probability_output": true
+    }
+  ],
+  "per_class_metrics": {
+    "logistic_regression": {
+      "0": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "1": {
+        "precision": 0.9347826086956522,
+        "recall": 0.9347826086956522,
+        "f1-score": 0.9347826086956522,
+        "support": 46.0
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 44.0
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 46.0
+      },
+      "4": {
+        "precision": 0.9782608695652174,
+        "recall": 1.0,
+        "f1-score": 0.989010989010989,
+        "support": 45.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 0.9782608695652174,
+        "f1-score": 0.989010989010989,
+        "support": 46.0
+      },
+      "6": {
+        "precision": 1.0,
+        "recall": 0.9777777777777777,
+        "f1-score": 0.9887640449438202,
+        "support": 45.0
+      },
+      "7": {
+        "precision": 0.9782608695652174,
+        "recall": 1.0,
+        "f1-score": 0.989010989010989,
+        "support": 45.0
+      },
+      "8": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9302325581395349,
+        "f1-score": 0.9195402298850575,
+        "support": 43.0
+      },
+      "9": {
+        "precision": 0.9772727272727273,
+        "recall": 0.9555555555555556,
+        "f1-score": 0.9662921348314607,
+        "support": 45.0
+      }
+    },
+    "linear_svm": {
+      "0": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "1": {
+        "precision": 0.9375,
+        "recall": 0.9782608695652174,
+        "f1-score": 0.9574468085106383,
+        "support": 46.0
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 44.0
+      },
+      "3": {
+        "precision": 0.9782608695652174,
+        "recall": 0.9782608695652174,
+        "f1-score": 0.9782608695652174,
+        "support": 46.0
+      },
+      "4": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 0.9565217391304348,
+        "f1-score": 0.9777777777777777,
+        "support": 46.0
+      },
+      "6": {
+        "precision": 0.9782608695652174,
+        "recall": 1.0,
+        "f1-score": 0.989010989010989,
+        "support": 45.0
+      },
+      "7": {
+        "precision": 0.9782608695652174,
+        "recall": 1.0,
+        "f1-score": 0.989010989010989,
+        "support": 45.0
+      },
+      "8": {
+        "precision": 1.0,
+        "recall": 0.8837209302325582,
+        "f1-score": 0.9382716049382716,
+        "support": 43.0
+      },
+      "9": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1-score": 0.967741935483871,
+        "support": 45.0
+      }
+    },
+    "rbf_svm": {
+      "0": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 45.0
+      },
+      "1": {
+        "precision": 0.9574468085106383,
+        "recall": 0.9782608695652174,
+        "f1-score": 0.967741935483871,
+        "support": 46.0
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 44.0
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 46.0
+      },
+      "4": {
+        "precision": 0.9565217391304348,
+        "recall": 0.9777777777777777,
+        "f1-score": 0.967032967032967,
+        "support": 45.0
+      },
+      "5": {
+        "precision": 0.9782608695652174,
+        "recall": 0.9782608695652174,
+        "f1-score": 0.9782608695652174,
+        "support": 46.0
+      },
+      "6": {
+        "precision": 0.9782608695652174,
+        "recall": 1.0,
+        "f1-score": 0.989010989010989,
+        "support": 45.0
+      },
+      "7": {
+        "precision": 0.9565217391304348,
+        "recall": 0.9777777777777777,
+        "f1-score": 0.967032967032967,
+        "support": 45.0
+      },
+      "8": {
+        "precision": 1.0,
+        "recall": 0.9302325581395349,
+        "f1-score": 0.963855421686747,
+        "support": 43.0
+      },
+      "9": {
+        "precision": 0.9772727272727273,
+        "recall": 0.9555555555555556,
+        "f1-score": 0.9662921348314607,
+        "support": 45.0
+      }
+    },
+    "tiny_mlp_64": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9777777777777777,
+        "f1-score": 0.9887640449438202,
+        "support": 45.0
+      },
+      "1": {
+        "precision": 0.9361702127659575,
+        "recall": 0.9565217391304348,
+        "f1-score": 0.946236559139785,
+        "support": 46.0
+      },
+      "2": {
+        "precision": 0.9777777777777777,
+        "recall": 1.0,
+        "f1-score": 0.9887640449438202,
+        "support": 44.0
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 46.0
+      },
+      "4": {
+        "precision": 0.9777777777777777,
+        "recall": 0.9777777777777777,
+        "f1-score": 0.9777777777777777,
+        "support": 45.0
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 0.9565217391304348,
+        "f1-score": 0.9777777777777777,
+        "support": 46.0
+      },
+      "6": {
+        "precision": 1.0,
+        "recall": 0.9555555555555556,
+        "f1-score": 0.9772727272727273,
+        "support": 45.0
+      },
+      "7": {
+        "precision": 0.9782608695652174,
+        "recall": 1.0,
+        "f1-score": 0.989010989010989,
+        "support": 45.0
+      },
+      "8": {
+        "precision": 0.9534883720930233,
+        "recall": 0.9534883720930233,
+        "f1-score": 0.9534883720930233,
+        "support": 43.0
+      },
+      "9": {
+        "precision": 0.9574468085106383,
+        "recall": 1.0,
+        "f1-score": 0.9782608695652174,
+        "support": 45.0
+      }
+    }
+  },
+  "notes": [
+    "Timing is hardware-, load-, and software-dependent; it is descriptive, not a universal ranking.",
+    "Serialized estimator size is compressed joblib size, not peak RAM or deployment package size.",
+    "This small 8x8 digits dataset is a teaching benchmark; results do not establish performance on modern camera images."
+  ]
+}
