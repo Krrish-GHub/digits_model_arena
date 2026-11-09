@@ -10,7 +10,7 @@ Tiny image classification is a clean way to study core ML trade-offs before movi
 
 The benchmark uses `sklearn.datasets.load_digits`: 1,797 labeled 8×8 grayscale digit images, with pixel values 0–16 and ten classes. The data are bundled with scikit-learn, so the benchmark does not need a network download. Pixel intensities are divided by 16 using a fixed transform. See the [scikit-learn dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html).
 
-This is a small teaching benchmark—not a claim about phone-camera, handwriting-in-the-wild, or production performance. Its tiny images and sample count make it useful for controlled comparisons, not broad vision conclusions.
+This is a small teaching benchmark, not a claim about phone-camera, handwriting-in-the-wild, or production performance. Its tiny images and sample count make it useful for controlled comparisons, not broad conclusions about vision.
 
 ## Models and protocol
 
